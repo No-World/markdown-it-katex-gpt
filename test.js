@@ -55,6 +55,38 @@ x = \\begin{cases}
 \\end{cases}
 \\]
 
+\\[
+\\boxed{
+\\int_{-\\infty}^{\\infty}
+\\frac{
+  \\displaystyle
+  \\sum_{n=0}^{\\infty}
+  \\frac{(-1)^n}{(2n+1)!}
+  \\left(
+    \\frac{d^{2n+1}}{dx^{2n+1}} f(x)
+  \\right)_{x = x_0}
+  \\cdot (x - x_0)^{2n+1}
+}{
+  \\sqrt{
+    \\alpha^2 +
+    \\beta \\int_0^1 e^{-t^2}\\,dt
+  }
+}
+\\, dx
+=
+\\lim_{N \\to \\infty}
+\\frac{1}{N}
+\\sum_{k=1}^{N}
+\\cos\\!\\left(
+  \\frac{2\\pi k}{N}
+  +
+  \\phi_k
+\\right)
+\\cdot
+\\mathbb{E}\\bigl[ X_k \\mid \\mathcal{F}_{k-1} \\bigr]
+}
+\\]
+
 `
 
 let result = md.render(testString)
